@@ -1,0 +1,49 @@
+/* Layout
+================================================================================*/
+.body__content {
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 0 0.5em;
+}
+.grid {
+ 	overflow: hidden; 
+}
+.grid-item {
+	float: none;
+	width: 100%;
+	@include media-query(501px) {
+		float: left;
+	}
+}
+.grid-thirds {
+	.grid-item {
+		@include media-query(501px) {
+			width: 33.3332%;
+		}
+	}
+}
+.grid-halfs {
+	.grid-item {
+		@include media-query(677px) {
+			width: 50%;
+		}
+	}
+}
+.col__half {
+	float: left;
+	width: 100%;
+	margin-bottom: 3em;
+	@include media-query(677px) {
+		width: 50%;
+	}
+}
+.mobile-br {
+	display: block;
+	@include media-query(750px) {
+		display: none;
+	}
+}
+#post-1326,
+#post-1317 {
+	//padding-bottom: 1px
+}

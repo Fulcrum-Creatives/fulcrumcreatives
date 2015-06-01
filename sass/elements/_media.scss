@@ -1,0 +1,19 @@
+/* Media
+================================================================================*/
+img,
+video,
+iframe,
+object,
+embed  {
+	max-width: 100%;
+	height: auto;
+}
+img {
+	display: block;
+}
+figure {
+	margin: 0;
+}
+.media__wrapper {
+	@include aspect-ratio(16, 9)
+}

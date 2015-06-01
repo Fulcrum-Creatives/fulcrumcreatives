@@ -1,0 +1,33 @@
+/* Base
+================================================================================*/
+html {
+	box-sizing: border-box;
+	font-family: avenir, sans-serif;
+	font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	@include font-size($font-size__base, rem);
+	color: $color__font;
+}
+@import "elements/accessibility";
+@import "elements/alignments";
+@import "elements/links";
+@import "elements/text";
+@import "elements/headings";
+@import "elements/media";
+@import "elements/header";
+@import "elements/menu";
+@import "elements/logo";
+@import "elements/hero-image";
+@import "elements/projects";
+@import "elements/portfolio";
+@import "elements/about";
+@import "elements/blog";
+@import "elements/forms";
+@import "elements/footer";
+@import "elements/social-icons";

@@ -1,0 +1,19 @@
+/* Social Icons
+================================================================================*/
+.social-icons {
+	a{
+		color: $yellow;
+		text-decoration: none;
+		font-size: 3em;
+		display: inline-block;
+		margin-right: 0.25em;
+		transition: color 0.5s ease;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			color: $color__font;
+			transition: color 0.5s ease;
+		}
+	}
+}

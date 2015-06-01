@@ -1,0 +1,136 @@
+/* About
+================================================================================*/
+.body__content {
+	&.about-page {
+		width: 900px;
+		max-width: 100%;
+		margin: 0 auto;
+		padding-top: 4em;
+		color: $color__headings;
+	}
+}
+.about-page {
+	.sub-title {
+		text-align: center;
+		font-size: 4em;
+		font-weight: normal;
+		margin-bottom: 1em;
+	}
+}
+.about__services {
+	overflow: hidden;
+	font-size: 1.8em;
+	line-height: 1.5em;
+	.company__title {
+		width: 100%;
+		height: auto;
+		font-size: 1em;
+		border-bottom: 1px solid $yellow;
+		margin-bottom: 0.5em;
+		padding-bottom: 0.5em;
+		text-transform: uppercase;
+		letter-spacing: 0.075em;
+	}
+	.odd {
+		padding-right: 0;
+		@include media-query(677px) {
+			padding-right: 3em;
+		}
+	}
+	.even {
+		padding-left: 0;
+		@include media-query(677px) {
+			padding-left: 3em;
+		}
+	}
+	ul {
+		padding: 0;
+		list-style-type: none;
+		overflow: hidden;
+		li {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+.about__team {
+	overflow: hidden;
+	p {
+		font-size: 1.8em;
+	}
+	em {
+		font-size: 0.8em;
+	}
+	.team__member {
+		width: 100%;
+		float: none;
+		height: 350px;
+		padding: 0 1em;
+		@include media-query(600px) {
+			width: 50%;
+			height: 360px;
+			float: left;
+			padding: 0 2em;
+		}
+		@include media-query(700px) {
+			width: 33.3333%;
+			height: 400px;
+		}
+	}
+	.team__member {
+		text-align: center;
+	}
+	.member__image {
+		width: 130px;
+		margin: 0 auto 2em;
+		border-radius: 50%;
+	}
+	.member__title {
+		font-size: 1.9em;
+	}
+}
+.add-info__item {
+	margin-top: 7em;
+	text-align: center;
+	.sub-title {
+		margin-bottom: 0.25em;
+	}
+	p {
+		font-size: 1.8em;
+		max-width: 410px;
+  		margin: 0 auto;
+	}
+	h3 {
+		font-size: 1.8rem;
+		text-transform: uppercase;
+  		letter-spacing: 0.075em;
+	}
+}
+.about__map {
+	height: 300px;
+	margin-top: 5em;
+}
+.about__company-info {
+	width: 570px;
+	max-width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: 1.8em;
+	.sub-title {
+		font-size: 2em;
+	}
+	address{
+		font-style: normal;
+	}
+	a {
+		color: $color__headings;
+	}
+	.about__comp-name {
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.075em;
+	}
+	.col__half {
+		padding: 0 1em;
+	}
+}
