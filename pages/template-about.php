@@ -10,10 +10,6 @@ get_header();
     	<section class="about__services">
     	    <?php get_template_part( 'includes/about', 'services' ); ?>
         </section>
-        <section class="about__team" aria-labelledby="team-members">
-        	<?php get_template_part( 'includes/about', 'team-heading' ); ?>
-        	<?php get_template_part( 'includes/about', 'team' ); ?>
-        </section>
         <section class="about__add-info">
         	<?php get_template_part( 'includes/about', 'add-info' ); ?>
         </section>

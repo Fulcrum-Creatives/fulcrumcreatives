@@ -11,9 +11,9 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?> aria-labelledby="section-heading-<?php the_ID(); ?>" role="article">
 			<a class="entry__link" href="<?php the_permalink(); ?>">
 				<header class="entry__header">
-					<div class="entry__meta">
-						<?php fcwp_published_date( array( 'published_text' => '', 'is_linked_published' => false, ) ); ?>
-					</div>
+					<!-- <div class="entry__meta">
+						<?php /*fcwp_published_date( array( 'published_text' => '', 'is_linked_published' => false, ) );*/ ?>
+					</div> -->
 					<h1 class="entry__title" id="section-heading-<?php the_ID(); ?>">
 						<?php the_title(); ?>
 					</h1>

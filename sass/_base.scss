@@ -13,6 +13,7 @@ html {
 body {
 	@include font-size($font-size__base, rem);
 	color: $color__font;
+  margin: 0;
 }
 @import "elements/accessibility";
 @import "elements/alignments";

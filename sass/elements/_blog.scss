@@ -51,10 +51,10 @@
 		color: $color__headings;
 		background-color: transparent;
 		transition: background-color 0.5s ease;
-		&:hover {
+		/* &:hover {
 			background-color: $yellow;
 			transition: background-color 0.5s ease;
-		}
+		} */
 	}
 }
 .button-one {
@@ -120,8 +120,22 @@
 	}
 }
 .entry__single {
+	.entry__header {
+		width: 65%;
+		margin: 0 auto;
+	}
 	.entry__body {
 		margin-top: 2em;
+		width: 100%;
+		float: none;
+		clear: both;
+		font-size: 115%;
+		line-height: 2.5em;
+		@include media-query(768px) {
+			width: 65%;
+			margin: 2em auto 0 auto;
+			clear: none;
+		}
 	}
 	.entry__meta {
 		font-size: 1.5em;

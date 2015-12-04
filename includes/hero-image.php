@@ -26,9 +26,11 @@ if( is_singular() && 'portfolio' == get_post_type() ) :
 			$heroimage_id = $fc_hero_image['ID'];
 		endif;
 	?>
-	<div class="hero-image">
+	<div class="hero-image home">
 		<figure>
-			<img src="<?php echo $heroimage_url; ?>" <?php echo tevkori_get_srcset_string( $heroimage_id, 'full' ); ?> alt="<?php echo $heroimage_alt; ?>" class="hero-image__image">
+			<?php if( !is_home() ) : ?>
+			<!-- <img src="<?php /*echo $heroimage_url;*/ ?>" <?php /*echo tevkori_get_srcset_string( $heroimage_id, 'full' );*/ ?> alt="<?php /*echo $heroimage_alt;*/ ?>" class="hero-image__image"> -->
+		<?php endif; ?>
 			<figcaption class="hero-image__caption">
 				<h1 class="hero-image__heading"><?php echo $fc_hero_image_text; ?></h1>
 				<a href="<?php echo $hero_link_url; ?>" class="hero-image__link"><?php echo $fc_hero_link_text; ?></a>

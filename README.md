@@ -1,1 +1,2 @@
-# Fulcrum Creatives child theme for [fc-wp-framework](https://github.com/Fulcrum-Creatives/fc-wp-framework)
+# fc-wp-child-theme
+A child theme boilerplate for the fc-wp-framework

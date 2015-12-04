@@ -31,6 +31,7 @@ body {
   font-size: 16px;
   font-size: 1rem;
   color: #414042;
+  margin: 0;
 }
 
 /* Accessibility
@@ -99,6 +100,7 @@ a:hover, a:active {
 ================================================================================*/
 p {
   margin-top: 0;
+  line-height: 1.5em;
 }
 
 /* Headings
@@ -299,18 +301,44 @@ figure {
 /* Hero Image
 ================================================================================*/
 .hero-image {
-  color: #fff;
+  color: #221f1f;
   overflow: hidden;
   text-align: center;
   margin-bottom: 8px;
+  margin-top: -3em;
 }
 @media screen and (min-width: 480px) {
   .hero-image {
     margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.hero-image.home {
+  height: 136px;
+  -webkit-transition: height 0.5s ease;
+          transition: height 0.5s ease;
+}
+@media screen and (min-width: 480px) {
+  .hero-image.home {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 640px) {
+  .hero-image.home {
+    -webkit-transition: height 0.5s ease;
+            transition: height 0.5s ease;
+    height: 330px;
+  }
+}
+@media screen and (min-width: 825px) {
+  .hero-image.home {
+    -webkit-transition: height 0.5s ease;
+            transition: height 0.5s ease;
+    height: 450px;
   }
 }
 .hero-image a {
-  color: #fff;
+  color: #221f1f;
 }
 .hero-image figure {
   position: relative;
@@ -354,16 +382,9 @@ figure {
   font-size: 1.7em;
   font-weight: normal;
   line-height: 1em;
-  color: #fff;
+  color: #221f1f;
   -webkit-transition: font-size 0.5s ease;
           transition: font-size 0.5s ease;
-}
-@media screen and (min-width: 495px) {
-  .hero-image .hero-image__heading {
-    font-size: 2.7em;
-    -webkit-transition: font-size 0.5s ease;
-            transition: font-size 0.5s ease;
-  }
 }
 @media screen and (min-width: 640px) {
   .hero-image .hero-image__heading {
@@ -380,7 +401,7 @@ figure {
   }
 }
 .hero-image .hero-image__link {
-  font-size: 1.6em;
+  font-size: 1.1em;
   font-weight: bold;
   text-decoration: none;
   letter-spacing: 0.075em;
@@ -479,7 +500,7 @@ figure {
   font-size: 1.65em;
 }
 .portfolio__info .details__heading {
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
   color: #414042;
   font-size: 1.5em;
   font-weight: bold;
@@ -715,11 +736,10 @@ figure {
   background-color: transparent;
   -webkit-transition: background-color 0.5s ease;
           transition: background-color 0.5s ease;
-}
-.entry__blog .entry__link:hover {
-  background-color: #ffc524;
-  -webkit-transition: background-color 0.5s ease;
-          transition: background-color 0.5s ease;
+  /* &:hover {
+  	background-color: $yellow;
+  	transition: background-color 0.5s ease;
+  } */
 }
 
 .button-one, .posts-navigation a, .aside__archives li > a, .entry__single .meta__terms a, .edit a {
@@ -791,8 +811,24 @@ figure {
   margin-bottom: 1em;
 }
 
+.entry__single .entry__header {
+  width: 65%;
+  margin: 0 auto;
+}
 .entry__single .entry__body {
   margin-top: 2em;
+  width: 100%;
+  float: none;
+  clear: both;
+  font-size: 115%;
+  line-height: 2.5em;
+}
+@media screen and (min-width: 768px) {
+  .entry__single .entry__body {
+    width: 65%;
+    margin: 2em auto 0 auto;
+    clear: none;
+  }
 }
 .entry__single .entry__meta {
   font-size: 1.5em;
@@ -897,7 +933,7 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: #ffc524;
-  box-shadow: 0 0 5px #d69e00;
+  box-shadow: 0 0 5px #d79e00;
   -webkit-transition: border-color 0.5s ease, box-shadow 0.5s ease;
           transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
@@ -995,9 +1031,9 @@ textarea {
   background-repeat: no-repeat;
   background-size: 50%;
   margin: 0;
-  border-top: 1px solid #d69e00;
-  border-right: 1px solid #d69e00;
-  border-bottom: 1px solid #d69e00;
+  border-top: 1px solid #d79e00;
+  border-right: 1px solid #d79e00;
+  border-bottom: 1px solid #d79e00;
 }
 .form__newsletter .gform_button:hover {
   background-image: url(images/check-hover.png);

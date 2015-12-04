@@ -1,15 +1,32 @@
 /* Hero Image
 ================================================================================*/
 .hero-image {
-	color: #fff;
+	color: $color__headings;
 	overflow: hidden;
 	text-align: center;
 	margin-bottom: 8px;
+	margin-top: -3em;
 	@include media-query(480px) {
 		margin-bottom: 0;
+		margin-top: 0;
+	}
+	&.home {
+		height: 136px;
+		transition: height 0.5s ease;
+		@include media-query(480px) {
+			margin-bottom: 0;
+		}
+		@include media-query(640px) {
+			transition: height 0.5s ease;
+			height: 330px;
+		}
+		@include media-query(825px) {
+			transition: height 0.5s ease;
+			height: 450px;
+	}
 	}
 	a {
-		color: #fff;
+		color: $color__headings;
 	}
 	figure {
 		position: relative;
@@ -43,12 +60,8 @@
 		font-size: 1.7em;
 		font-weight: normal;
 		line-height: 1em;
-		color: #fff;
+		color: $color__headings;
 		transition: font-size 0.5s ease;
-		@include media-query(495px) {
-			font-size: 2.7em;
-			transition: font-size 0.5s ease;
-		}
 		@include media-query(640px) {
 			font-size: 3.5em;
 			transition: font-size 0.5s ease;
@@ -59,7 +72,7 @@
 		}
 	}
 	.hero-image__link {
-		font-size: 1.6em;
+		font-size: 1.1em;
 		font-weight: bold;
 		text-decoration: none;
 		letter-spacing: 0.075em;

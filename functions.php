@@ -40,10 +40,10 @@ if( !function_exists( 'fcwp_load_stylesheets' ) ) :
 		wp_enqueue_style( 'style', FCWP_STYLESHEETURI, '', FCWP_VERSION );
 		// Load the Internet Explorer 7 specific stylesheet.
 		wp_enqueue_style( 'ie8-style', FCWP_CHILD_STYLESHEETURI . '/css/ie8.style.css', '', FCWP_VERSION );
-		wp_style_add_data( 'ie8-style', 'conditional', 'if IE 8' );
+		wp_style_add_data( 'ie8-style', 'conditional', 'IE 8' );
 		// Load the Internet Explorer 7 specific stylesheet.
 		wp_enqueue_style( 'ie9-style', FCWP_CHILD_STYLESHEETURI . '/css/ie9.style.css', '', FCWP_VERSION );
-		wp_style_add_data( 'ie9-style', 'conditional', 'if IE 9' );
+		wp_style_add_data( 'ie9-style', 'conditional', 'IE 9' );
 		// Font Awesome
 		wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', '', FCWP_VERSION );
 	}
@@ -65,6 +65,8 @@ if( !function_exists( 'fcwp_load_child_javascript' ) ) :
 	    }
 	    // comment reply
 	    if( is_singular() && 'portfolio' == get_post_type() ) :
+	    	wp_register_script( 'optimizely', '//cdn.optimizely.com/js/3273730023.js', false, FCWP_VERSION, false );
+	    	wp_enqueue_script( 'optimizely' );
 	    	wp_register_script( 'fitvid.js', FCWP_CHILD_STYLESHEETURI . '/js/vendor/fitvids.js', false, FCWP_VERSION, true );
 	    	wp_enqueue_script( 'fitvid.js' );
 	    endif;
@@ -94,4 +96,15 @@ endif;
 function portfolio_details( $label, $text ) {
 	$string = '<h2 class="details__heading">' . __( $label, FCWP_TAXDOMAIN ) . '</h2><p>' . $text . '</p>';
 	return $string;
+}
+/*---------------------------------------------------------
+ * Redirect from CPT singles
+---------------------------------------------------------*/
+add_action( 'template_redirect', 'wpse_128636_redirect_post' );
+function wpse_128636_redirect_post() {
+  $queried_post_type = get_query_var('post_type');
+  if ( is_single() && 'team-member' ==  $queried_post_type || 'team-member' ==  $queried_post_type ) {
+    wp_redirect( home_url(), 301 );
+    exit;
+  }
 }
